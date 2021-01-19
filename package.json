@@ -1,0 +1,33 @@
+{
+  "name": "m6-d7-article-be",
+  "version": "1.0.0",
+  "description": "psgSQL database exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config ./src/server.js",
+    "debug": "nodemon --inspect -r dotenv/config ./src/server.js",
+    "start": "node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-Vane/m6-d7-article-be.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C-Vane/m6-d7-article-be/issues"
+  },
+  "homepage": "https://github.com/C-Vane/m6-d7-article-be#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "express-list-endpoints": "^5.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
