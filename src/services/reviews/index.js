@@ -13,10 +13,10 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:id", async (req, res, next) => {
+router.get("/:articleId", async (req, res, next) => {
   try {
-    const { rows } = await Reviews.findById(req.params.id);
-    res.send(rows);
+    const { rows } = await Reviews.findByIdArticleReviews(req.params.articleId);
+    res.send([...rows.json_build_object]);
   } catch (e) {
     next(e);
   }

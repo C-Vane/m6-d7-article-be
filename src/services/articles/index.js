@@ -15,8 +15,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const { rows } = await Articles.findById(req.params.id);
-    res.send(rows);
+    const { rows } = await Articles.findByIdArticle(req.params.id);
+    res.send(rows[0].json_build_object);
   } catch (e) {
     next(e);
   }
